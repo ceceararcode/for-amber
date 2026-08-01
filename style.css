@@ -75,14 +75,16 @@ p {
 /* LETTER PAGE */
 
 .letter-page {
-    width:90%;
+    width:100%;
     max-width:950px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:60px 0 50px;
+    padding:20px 0;
     margin:0 auto;
 }
-
-
 
 .paper{
 width:100%;
@@ -90,19 +92,15 @@ max-width:720px;
 height:510px;
 overflow-y:auto;
 box-sizing:border-box;
-
-background:
-linear-gradient(
-180deg,
-#fffefb,
-#fff9f5);
-padding:55px;
+background:linear-gradient(180deg,#fffefb,#fff9f5);
+padding:45px 50px;
 border-radius:24px;
 border:2px solid #f6d5df;
 box-shadow:0 18px 45px rgba(0,0,0,.10);
 position:relative;
 line-height:2;
 text-align:left;
+margin:20px auto;
 animation:letterAppear 1s ease;
 }
 
@@ -189,21 +187,37 @@ scale(1);
 
 }
 
-.next-button {
-    display:inline-block;
-    margin-top:35px;
-    background:#f4c6d7;
-    padding:15px 30px;
-    border-radius:50px;
-    text-decoration:none;
-    color:#7a4055;
-    font-size:20px;
-    transition:0.3s;
+.button-container {
+    display: flex;
+    gap: 15px;
+    justify-content:center;
+    align-items:center;
+    margin-top: 25px;
+    flex-wrap:wrap;
 }
 
+.next-button, .back-button {
+    display:inline-block;
+    padding:12px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:18px;
+    font-family: "Poppins", sans-serif;
+    transition:0.s;
+}
 
+    .next-button {
+    background:#f4c6d7;
+    color:#7a4055;
+}
 
-.next-button:hover {
+.back-button {
+    background: #ffffff;
+    color:#7a4055;
+    border: 1.5px solid #f4c6d7;
+}
+
+.next-button:hover, .back-button:hover {
     transform:scale(1.05);
 }
 
